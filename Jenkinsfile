@@ -3,12 +3,22 @@ pipeline {
   stages {
     stage('Inicio') {
       steps {
-        sh 'sh pwd'
+        cleanWs()
       }
     }
-    stage('Test') {
+    stage('Download') {
       steps {
-        sh 'sh ls'
+        echo 'Descargar'
+      }
+    }
+    stage('Calidad') {
+      steps {
+        echo 'Calidad'
+      }
+    }
+    stage('Deploy') {
+      steps {
+        echo 'Desplegar en AWS'
       }
     }
   }
