@@ -6,6 +6,11 @@ pipeline {
         cleanWs()
       }
     }
+    stage('Build') {
+      steps {
+        sh 'docker build -t app .'
+      }
+    }
     stage('Download') {
       steps {
         echo 'Descargar'
