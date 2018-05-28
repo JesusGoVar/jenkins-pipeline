@@ -3,7 +3,8 @@ pipeline {
   stages {
     stage('Inicio') {
       steps {
-        cleanWs()
+        //cleanWs()
+        echo 'Limpiar'
       }
     }
     stage('Build') {
