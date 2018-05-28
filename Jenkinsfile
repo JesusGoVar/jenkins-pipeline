@@ -9,7 +9,7 @@ pipeline {
     }
     stage('Build') {
       steps {
-        sh 'sudo docker build -t app .'
+        sh 'su docker build -t app .'
       }
     }
     stage('Download') {
