@@ -10,6 +10,14 @@ pipeline {
       steps {
         echo 'Descargar'
       }
+      post{
+        always{
+          echo 'esto siempre sale'
+        }
+        failure{
+          echo 'Mandar correo'
+        }
+      }
     }
     stage('Calidad') {
       steps {
