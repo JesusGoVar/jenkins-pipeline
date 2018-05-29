@@ -11,7 +11,7 @@ pipeline {
       steps {
         withCredentials([usernameColonPassword(credentialsId: 'ubuntu_jenkins', variable: 'ubuntu_jenkins')]) {
           // some block
-          sh 'sudo docker build -t app .'
+          sh 'docker build -t app .'
         }
       }
     }
