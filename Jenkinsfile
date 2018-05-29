@@ -4,7 +4,7 @@ pipeline {
     stage('Inicio') {
       steps {
         //cleanWs()
-        echo 'Limpiar'
+        sh 'whoami'
       }
     }
     stage('Build') {
