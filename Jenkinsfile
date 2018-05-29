@@ -9,7 +9,10 @@ pipeline {
     }
     stage('Build') {
       steps {
-        sh 'sudo docker build -t app .'
+        withCredentials([usernameColonPassword(credentialsId: 'ubuntu_jenkins', variable: 'ubuntu_jenkins')]) {
+          // some block
+          sh 'sudo docker build -t app .'
+        }
       }
     }
     stage('Download') {
